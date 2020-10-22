@@ -18,6 +18,6 @@ app.use("/api/files", require("./routes/files"));
 app.use("/files", require("./routes/show"));
 app.use("/file/download", require("./routes/download"));
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server Started Sucessfully!");
 });
