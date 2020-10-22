@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const connectDB = require("./config/db");
+const PORT = process.env.PORT || 3000;
 // const ejs=require('ejs');
 const path = require("path");
 
@@ -18,6 +19,6 @@ app.use("/api/files", require("./routes/files"));
 app.use("/files", require("./routes/show"));
 app.use("/file/download", require("./routes/download"));
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log("Server Started Sucessfully!");
 });
